@@ -13,7 +13,23 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <github.global.server>github</github.global.server>
+        <github.global.oauth2Token>${env.GITHUB_OAUTH_TOKEN}</github.global.oauth2Token>>
     </properties>
+    
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>https://travis-ci.org/lanyonm/playground</url>
+    </ciManagement>
+
+    <issueManagement>
+        <url>https://github.com/tjaydk/pages/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+    
+    <scm>
+        <url>https://github.com/tjaydk/pages</url>
+        <connection>scm:git:git://github.com/tjaydk/pages.git</connection>
+    </scm>
     
     <build>
         <plugins>
@@ -32,6 +48,10 @@
                         <phase>site</phase>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
