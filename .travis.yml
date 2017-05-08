@@ -1,9 +1,17 @@
 language: java
 jdk: oraclejdk8
 
-# safelist
-branches:
-  only:
-  - master
-  - gh-pages
-  - /.*/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $MY_SECRET_ENV # Set in travis-ci.org dashboard
+  on:
+    branch: master
+
+env:
+  global:
+  - ENCRYPTION_LABEL: f959e0426cd8
+  - COMMIT_AUTHOR_EMAIL: dennis_michael@jubii.dk
+  matrix:
+  - secure: puixw+96DGhwF1WWb14mpEUUMeCf3v+TholIpjtLfthL6yvFbV0Ic+3hUnsM3kOwB2jO+jCG+dypNepRcSjK6JNPlmSD0LVN+kC6XaF8ECaCd6IKxLUA7hDCv+WzHVc/ihzW7i2D1ChBmxc2b+ef3T03BpmqlWsv+GHg7M8SOrRv6lwFUojYIYsqR6JJaJiuhUM2e2vIKeFdskp5KfbJbXEUk9I5YwEArHb7cmuOuEGTAmdv5o04zBuPW7H/clkbyF9pokRM3E7zO3oG4r0nM4USx61k5iy0slQAc4tHnq+hp6LVBnbnxaV5x7kYZaP7F5/xCGAWBmlEoRbtNGHqm1vtfFgy+qouHQBSm8z1yKCBz4bfdGAMElTY8FF38Y5rl+ww4IDySDr1nb2ntcuQi4c2sRcQAlWT9ISMyEJl3Z9Z0uHeFgv7JPEWUDVEUcg0zUkzAySZ6cuHUuy5JwapHChrEvBJAjj6Sd7J1qhheI089NaOfMU14HOm03C/h2awJM0/M9XuzdB6O/62WyZK7xEWOKx8+LezMea91pEBISXQv5PI27R8R1nhXDkUTqmAzbeecnPmt/kEULhfCkBu+g36zqBEWvt6KiPEtVdZ80vxohKCm5sq4yOwHC79BBFm+inNIVYk2FciyCIpx5cNWPhwrr6LN7B/YqpN5Qp2FPM=
+  - secure: uI6sKy+vn6ntB4tgF2LfMz2wPclzikq4iXrn2RCFyrdo001ICCgOgzLz5V02HdA0kVPnjsxwM8RV/znBjimbgRiZpYEghYQXvPXVN9rRTJT49Q2tHmklohoxFkiUZx8261ubA+ZNnE7XrsN07QzMe3txMxqwjVOEOiQD5t718BOPDJF3TkDZFLHNp2U9DfZ2Xl+WBlk//tPPujbEKZoju8+8/uGTR4Y87MY7GBXG7kYYrs8upCzzppH1kglILsORzSYJroBv8oxgrQXIhbKnXbRZi/7+L4qE9rRPlYP5SQ61I+f+7t0tE/oMJN9vlaTn8y9xEjpMEmDRgzleuHUWRBYTsWoc1cJJF/Wgx2a25G7sjVqeFf9ivGmq0Ufqu1RtVaSR6sS59Ms9gpf8Ms3PeVVtaMQT3vCbQYrrnMsVN/9MKtT+c5CZcE8TF3IlfTANbW/MxdW9CdZJLMRIbsmH6Ym+74unLWqdkyXun1ElC4K6F6c1NeyBJYJkCz64sURzZXpTW4lii1Sb6au45gfoaDipjfKCgSefWs5lf3MRHSBQ6L7sQj1QEU2oYt7bNRW9IvqEkj5bC674F+CZSISu9aTr1bG24npdE0+YSf6+4LhTgK70Z6nHm23+uvlc1xO8OLdbrQjDZwBsGzdijRTOOImULHeR3YmOdFShZBeC8Z0=
