@@ -49,6 +49,7 @@
                     <force>true</force>
                     <repositoryName>pages</repositoryName>      <!-- github repo name -->
                     <repositoryOwner>tjaydk</repositoryOwner>    <!-- github username -->
+                    <oauth2Token>${env.GITHUB_OAUTH_TOKEN}</oauth2Token>
                     <server>github</server>
                 </configuration>
                 <executions>
