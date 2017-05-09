@@ -1,6 +1,11 @@
 language: java
 jdk: oraclejdk8
 
+build:
+	only:
+	- master
+	- gh-pages
+
 after_success:
 - mvn clean site -X
 
