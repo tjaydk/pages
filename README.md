@@ -100,3 +100,5 @@ $ travis encrypt GITHUB_OAUTH_TOKEN="<The generated Github Token>" --add
 The --add will let Travis CLI automatically add the encrypted enviroment variable to your .travis.yml.
 
 Now that all this is done you are ready to go. Have fun and good luck.
+
+[Link to this sites maven site documentation](https://tjaydk.github.io/pages/)
