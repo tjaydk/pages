@@ -1,7 +1,7 @@
 language: java
 jdk: oraclejdk8
 
-after-script:
+after-success:
 	- mvn clean site -X
 
 env:
