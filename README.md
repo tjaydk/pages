@@ -1,6 +1,8 @@
 # Continues Integration with Maven Travis and GitHub Pages
 #### This is a complete guide to setup your maven project with Travis and GitHub Pages.
 
+[![Build Status](https://travis-ci.org/tjaydk/pages.svg?branch=master)](https://travis-ci.org/tjaydk/pages)
+
 In order to get this to work you have to have an account at Travis and Travis CLI installed.
 To install Travis you need to install [Ruby](https://rubygems.org/pages/download/) and [Ruby Gems](https://rubygems.org/pages/download/)
 
