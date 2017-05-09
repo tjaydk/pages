@@ -1,11 +1,9 @@
 language: java
 jdk: oraclejdk8
 
-after_success: 
-  - chmod a+x deploy.sh
-  - ./deploy.sh
+after-script:
+	- mvn clean site -X
 
 env:
   global:
-  - ENCRYPTION_LABEL: "f959e0426cd8"
-  - COMMIT_AUTHOR_EMAIL: "dennis_michael@jubii.dk"
+    secure: x1ZBYVZzAIClvDEDYfntqg9BVqe/VmgWhH1TZJV7uS6oDuGfOjxdlI8qsHIF2H5AUDcISGmCCH/X4rDaedkemq4IYJxENYQLgv35ZCHtWga2dyCimlF2+fp+xEVURGv7TfOR2RFxQTsdCZmwboq3gUiUswsisNB9h3RlEDxZOOxJThGMf5b87HCYVeulD9v1a0uEXqcY4teD6/ZY/UwciQY171Ts+xxavqGHwHzRRw7rNB0lvBDl6qye+YGT+wBMUpMQ25xk5eJouCb8B/7tFS7nNKDZv85KwsGDaOZYe6lVeCt77pgMKG+3y+PZ+ZlnIOHLAaplgKu70FLS8qT6TtSW5U2Y9FNh9rzo1MrM6C+Y1Em53ABe2RZQFvqGzJ3dG9F5e+h1L6IKM8Hw6dad8Og8DLORVaZNpfCOG7wVEQiNmuSYeHo/SHt+vLOVdzkUmFHLhbBju4fbQj1mnQmNTGmqiDjgRgajXlGBSi8c0KrovK4AGOaB3vd/T+e+Fsm6DEbp2BGjK7nOWaDT/X5qQyXhyvT3djSADH9gW1nCM675R8N0uQKBFiD+1G2waeIby/Y69KNe2EQE8+8GqdOG71wvhHqhIYH6N5GE+cpK/4bYt0ryNqYZqzfM3w9eOs1lnY/xkXIJEiIwhouzVXFyXIuWQwHX0aHxphVYENdyoqg=
